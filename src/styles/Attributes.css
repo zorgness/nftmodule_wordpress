@@ -1,0 +1,28 @@
+.attributes-container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.attributes-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.attributes-item {
+    width: 200px;
+    margin: 10px;
+	padding: 10px;
+    background-color: darkcyan;
+	text-transform: capitalize;	
+    border-radius: 20px;
+}
+
+.attributes-type {
+    color:darkblue;
+}
+
+.attributes-value {
+    color:white;
+}

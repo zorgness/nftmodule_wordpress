@@ -1,0 +1,659 @@
+{
+    "Animation": [
+        {
+            "name": "Treasure Cave",
+            "value": [
+                1156,
+                20.81
+            ]
+        },
+        {
+            "name": "Captain Deck",
+            "value": [
+                1149,
+                20.68
+            ]
+        },
+        {
+            "name": "Kitchen",
+            "value": [
+                1102,
+                19.84
+            ]
+        },
+        {
+            "name": "Tavern",
+            "value": [
+                1081,
+                19.46
+            ]
+        },
+        {
+            "name": "Canon Deck",
+            "value": [
+                1067,
+                19.21
+            ]
+        }
+    ],
+    "Body Skin": [
+        {
+            "name": "Blue",
+            "value": [
+                1687,
+                30.37
+            ]
+        },
+        {
+            "name": "Blue Tattooed",
+            "value": [
+                1245,
+                22.41
+            ]
+        },
+        {
+            "name": "Dark",
+            "value": [
+                883,
+                15.9
+            ]
+        },
+        {
+            "name": "Dark Tattooed",
+            "value": [
+                613,
+                11.04
+            ]
+        },
+        {
+            "name": "Evil",
+            "value": [
+                491,
+                8.84
+            ]
+        },
+        {
+            "name": "Evil Tattooed",
+            "value": [
+                378,
+                6.8
+            ]
+        },
+        {
+            "name": "Scurvy",
+            "value": [
+                258,
+                4.64
+            ]
+        }
+    ],
+    "Beard": [
+        {
+            "name": "None",
+            "value": [
+                1202,
+                21.64
+            ]
+        },
+        {
+            "name": "Beard Sparrow Ginger",
+            "value": [
+                1008,
+                18.15
+            ]
+        },
+        {
+            "name": "Beard Sparrow Brown",
+            "value": [
+                791,
+                14.24
+            ]
+        },
+        {
+            "name": "Beard Pike Ginger",
+            "value": [
+                619,
+                11.14
+            ]
+        },
+        {
+            "name": "Beard Pike Brown ",
+            "value": [
+                508,
+                9.14
+            ]
+        },
+        {
+            "name": "Beard Brown",
+            "value": [
+                419,
+                7.54
+            ]
+        },
+        {
+            "name": "Beard Ginger",
+            "value": [
+                334,
+                6.01
+            ]
+        },
+        {
+            "name": "Van Dyke Brown",
+            "value": [
+                267,
+                4.81
+            ]
+        },
+        {
+            "name": "Van Dyke Ginger",
+            "value": [
+                243,
+                4.37
+            ]
+        },
+        {
+            "name": "Beard Pearl",
+            "value": [
+                164,
+                2.95
+            ]
+        }
+    ],
+    "Teeth": [
+        {
+            "name": "Clean Teeth",
+            "value": [
+                2405,
+                43.29
+            ]
+        },
+        {
+            "name": "One Tooth Golden",
+            "value": [
+                1378,
+                24.81
+            ]
+        },
+        {
+            "name": "Pointy Teeth",
+            "value": [
+                897,
+                16.15
+            ]
+        },
+        {
+            "name": "Bloody Teeth",
+            "value": [
+                525,
+                9.45
+            ]
+        },
+        {
+            "name": "Golden",
+            "value": [
+                350,
+                6.3
+            ]
+        }
+    ],
+    "Head wear": [
+        {
+            "name": "Bandana",
+            "value": [
+                938,
+                16.89
+            ]
+        },
+        {
+            "name": "Tricorn Hat",
+            "value": [
+                778,
+                14.01
+            ]
+        },
+        {
+            "name": "Alopecia",
+            "value": [
+                694,
+                12.49
+            ]
+        },
+        {
+            "name": "Viking Helmet",
+            "value": [
+                584,
+                10.51
+            ]
+        },
+        {
+            "name": "Tricorn Parrot",
+            "value": [
+                477,
+                8.59
+            ]
+        },
+        {
+            "name": "Chef Hat",
+            "value": [
+                426,
+                7.67
+            ]
+        },
+        {
+            "name": "Captain Hat",
+            "value": [
+                371,
+                6.68
+            ]
+        },
+        {
+            "name": "Leprechaun Hat",
+            "value": [
+                316,
+                5.69
+            ]
+        },
+        {
+            "name": "Straw Hat",
+            "value": [
+                241,
+                4.34
+            ]
+        },
+        {
+            "name": "Propeller Cap",
+            "value": [
+                198,
+                3.56
+            ]
+        },
+        {
+            "name": "Gold Hat",
+            "value": [
+                185,
+                3.33
+            ]
+        },
+        {
+            "name": "SM Hood",
+            "value": [
+                180,
+                3.24
+            ]
+        },
+        {
+            "name": "Solana Cap",
+            "value": [
+                167,
+                3.01
+            ]
+        }
+    ],
+    "Outfit": [
+        {
+            "name": "Shirt Black",
+            "value": [
+                863,
+                15.54
+            ]
+        },
+        {
+            "name": "Shirt Red",
+            "value": [
+                727,
+                13.09
+            ]
+        },
+        {
+            "name": "Shirt Bleu",
+            "value": [
+                667,
+                12.01
+            ]
+        },
+        {
+            "name": "Jacket Black",
+            "value": [
+                520,
+                9.36
+            ]
+        },
+        {
+            "name": "Jacket Red",
+            "value": [
+                454,
+                8.17
+            ]
+        },
+        {
+            "name": "Jacket Bleu",
+            "value": [
+                405,
+                7.29
+            ]
+        },
+        {
+            "name": "Captain",
+            "value": [
+                347,
+                6.25
+            ]
+        },
+        {
+            "name": "Bloody",
+            "value": [
+                304,
+                5.47
+            ]
+        },
+        {
+            "name": "Chef",
+            "value": [
+                257,
+                4.63
+            ]
+        },
+        {
+            "name": "Perry Buoy",
+            "value": [
+                221,
+                3.98
+            ]
+        },
+        {
+            "name": "Kilt",
+            "value": [
+                200,
+                3.6
+            ]
+        },
+        {
+            "name": "Hawaien",
+            "value": [
+                169,
+                3.04
+            ]
+        },
+        {
+            "name": "Tutu",
+            "value": [
+                155,
+                2.79
+            ]
+        },
+        {
+            "name": "SM",
+            "value": [
+                155,
+                2.79
+            ]
+        },
+        {
+            "name": "Solana",
+            "value": [
+                111,
+                2.0
+            ]
+        }
+    ],
+    "Eyes asset": [
+        {
+            "name": "None",
+            "value": [
+                1736,
+                31.25
+            ]
+        },
+        {
+            "name": "Eye Patch",
+            "value": [
+                1227,
+                22.09
+            ]
+        },
+        {
+            "name": "Heart",
+            "value": [
+                907,
+                16.33
+            ]
+        },
+        {
+            "name": "SteamPunk",
+            "value": [
+                616,
+                11.09
+            ]
+        },
+        {
+            "name": "Cyclop",
+            "value": [
+                427,
+                7.69
+            ]
+        },
+        {
+            "name": "Scouter",
+            "value": [
+                390,
+                7.02
+            ]
+        },
+        {
+            "name": "3D",
+            "value": [
+                252,
+                4.54
+            ]
+        }
+    ],
+    "Ears asset": [
+        {
+            "name": "None",
+            "value": [
+                2359,
+                42.47
+            ]
+        },
+        {
+            "name": "Simple Golden",
+            "value": [
+                1456,
+                26.21
+            ]
+        },
+        {
+            "name": "Triple Golden",
+            "value": [
+                823,
+                14.82
+            ]
+        },
+        {
+            "name": "SkullHead",
+            "value": [
+                583,
+                10.5
+            ]
+        },
+        {
+            "name": "Dragon Sphere",
+            "value": [
+                334,
+                6.01
+            ]
+        }
+    ],
+    "Neck asset": [
+        {
+            "name": "None",
+            "value": [
+                1269,
+                22.84
+            ]
+        },
+        {
+            "name": "Shark Teeth",
+            "value": [
+                983,
+                17.7
+            ]
+        },
+        {
+            "name": "Pirate Medal",
+            "value": [
+                750,
+                13.5
+            ]
+        },
+        {
+            "name": "Fish Chain",
+            "value": [
+                636,
+                11.45
+            ]
+        },
+        {
+            "name": "Golden Chain",
+            "value": [
+                497,
+                8.95
+            ]
+        },
+        {
+            "name": "Canibal Chain",
+            "value": [
+                413,
+                7.43
+            ]
+        },
+        {
+            "name": "Chest Key",
+            "value": [
+                298,
+                5.36
+            ]
+        },
+        {
+            "name": "Dog Collar",
+            "value": [
+                268,
+                4.82
+            ]
+        },
+        {
+            "name": "Gameboy",
+            "value": [
+                224,
+                4.03
+            ]
+        },
+        {
+            "name": "Solana Medal",
+            "value": [
+                217,
+                3.91
+            ]
+        }
+    ],
+    "Hand asset": [
+        {
+            "name": "Knife",
+            "value": [
+                889,
+                16.0
+            ]
+        },
+        {
+            "name": "Wood Sword",
+            "value": [
+                767,
+                13.81
+            ]
+        },
+        {
+            "name": "Iron Saber",
+            "value": [
+                610,
+                10.98
+            ]
+        },
+        {
+            "name": "Iron Saber Bloody",
+            "value": [
+                578,
+                10.41
+            ]
+        },
+        {
+            "name": "Broken Bottle",
+            "value": [
+                517,
+                9.31
+            ]
+        },
+        {
+            "name": "Hook",
+            "value": [
+                389,
+                7.0
+            ]
+        },
+        {
+            "name": "Rolling Pin",
+            "value": [
+                355,
+                6.39
+            ]
+        },
+        {
+            "name": "Wood Spoon",
+            "value": [
+                299,
+                5.38
+            ]
+        },
+        {
+            "name": "Bone",
+            "value": [
+                270,
+                4.86
+            ]
+        },
+        {
+            "name": "Spiked Bat",
+            "value": [
+                197,
+                3.55
+            ]
+        },
+        {
+            "name": "Captain Saber",
+            "value": [
+                189,
+                3.4
+            ]
+        },
+        {
+            "name": "Katana",
+            "value": [
+                173,
+                3.11
+            ]
+        },
+        {
+            "name": "Sausage",
+            "value": [
+                169,
+                3.04
+            ]
+        },
+        {
+            "name": "Laser Saber",
+            "value": [
+                153,
+                2.75
+            ]
+        }
+    ]
+}
