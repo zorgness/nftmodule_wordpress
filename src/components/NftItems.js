@@ -3,13 +3,19 @@ import  Attributes  from './Attributes';
 import RarityItems from './RarityItems';
 import '../styles/Attributes.css';
 import styled, { keyframes } from 'styled-components';
-import { slideInUp } from 'react-animations';
+import { slideInUp, tada } from 'react-animations';
 
-const bounceAnimation = keyframes`${slideInUp}`;
+const slideAnimation = keyframes`${slideInUp}`;
+const tadaAnimation = keyframes`${tada}`
 
-const BouncyDiv = styled.div`
-  animation: 2s ${bounceAnimation};
+const SlideDiv = styled.div`
+  animation: 2s ${slideAnimation};
 `;
+
+const TadaDiv = styled.div`
+  animation: 2s ${tadaAnimation};
+`;
+
 
 class NftItems extends Component {
     render() {
@@ -17,16 +23,14 @@ class NftItems extends Component {
         let nft = this.props.nft[0]
 
         if(nft !== undefined) {
-            
-            if(nft.symbol !== "BC" && nft.name.includes("Bulliz Crew")) {
-                return (
-                    <div style={styles.error}>Not from our collection</div>
-                )
-            }
+           
         
             return (
-                <BouncyDiv>
-                <div className='nft-info-container'>
+                <SlideDiv>{nft.symbol !== "BC" && !nft.name.includes("Bulliz Crew")
+                ? <TadaDiv style={{display:"flex", justifyContent:"center"}}>
+                     <div style={styles.error}>Not from our collection</div>
+                </TadaDiv> 
+                :<div className='nft-info-container'>
     
                     <div>
                         <h2>{nft.name}</h2>
@@ -55,7 +59,7 @@ class NftItems extends Component {
                     </div>
 
                 </div>
-                </BouncyDiv>
+         } </SlideDiv>
             );
         } 
         else {
@@ -71,22 +75,30 @@ const styles = {
     image: {
         width: 180,
         height: 180,
+        margin:10,
         backgroundColor: 'gray'
+        
         
       },
       video : {
-        padding: 20
+        margin:10
         
       },
       images_container: {
           display: "flex",
           justifyContent: "space-around",
-          flexWrap: "wrap"
+          flexWrap: "wrap",
+          padding: 20
       },
       error: {
+          fontFamily: "serial",
           fontSize: 30,
-          margin: 20,
-          padding: 20
+          margin: 100,
+          padding: 20,
+          width: 300,
+          backgroundColor: "purple",
+          color: "white",
+          borderRadius: 20,
       },
       rarity_items_container: {
           display: "flex",

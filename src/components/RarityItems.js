@@ -27,7 +27,7 @@ function rarityTotal(data) {
 const RarityItems = ({metadata}) => (
     <div style={styles.rarity_items}>
         <h3>Rarity indice</h3>
-        <h3 style={{color:"yellow"}}>{rarityTotal(metadata)}</h3> 
+        <h3 style={{color:"yellow"}}>{rarityTotal(metadata)} %</h3> 
 
         <div>
             

@@ -26,11 +26,10 @@ class SeachBar extends Component {
             this.setState({isLoading: true})
             NftInfoJson(this.state.searchToken)
             .then(result => {
-                if(result.data.symbol !== 'BC') {
-                    console.log("not from our collection")
-                    this.setState({searchToken:'',
-                    isLoading : false})    
-                }   
+                // if(result.data.symbol !== 'BC') {
+                //     console.log("not from our collection")
+                //     this.setState({searchToken:''})    
+                // }   
                 this.setState({
                     nft: [result.data],
                      isLoading : false
@@ -38,7 +37,7 @@ class SeachBar extends Component {
             })
             this.setState({searchToken:''})   
         } else {
-            console.log("not a token")
+            
             this.setState({searchToken:''})
         } 
     }
