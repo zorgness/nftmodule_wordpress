@@ -28,7 +28,8 @@ class SeachBar extends Component {
             .then(result => {
                 if(result.data.symbol !== 'BC') {
                     console.log("not from our collection")
-                    this.setState({searchToken:''})    
+                    this.setState({searchToken:'',
+                    isLoading : false})    
                 }   
                 this.setState({
                     nft: [result.data],
