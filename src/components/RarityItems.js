@@ -1,5 +1,7 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import VisibilitySensor from "react-visibility-sensor";
+
 const rarityChart = require('../Data/raritychart.json')
 
 
@@ -40,19 +42,34 @@ const RarityItems = ({metadata}) =>
           <div style={styles.text}><h3>RARITY</h3></div>     
           
           <div style={{width: 150}}>
-          <CircularProgressbar
-           value={100 - rarityTotal(metadata)} 
-           minValue={0} 
-           maxValue={100} 
-           text={rarityTotal(metadata) == 100.00 ? '0 %' : `${rarityTotal(metadata)}%`}
-           styles={buildStyles({
-            pathColor: `rgba(194, 158, 120, ${100 - rarityTotal(metadata)})`,
-            textSize: '18px',
-            textColor: 'white',
-            trailColor: 'white',
-            backgroundColor: 'grey"',
-          })}
-         />
+         
+
+        <VisibilitySensor>
+            {({ isVisible }) => {
+              const percentage = isVisible ? 100 - rarityTotal(metadata) : 0;
+              return (
+                <CircularProgressbar
+                value={percentage} 
+                minValue={0} 
+                maxValue={100} 
+                text={rarityTotal(metadata) == 100.00 ? '0 %' : `${rarityTotal(metadata)}%`}
+                styles={buildStyles({
+                 pathColor: `rgba(194, 158, 120, ${100 - rarityTotal(metadata)})`,
+                 textSize: '18px',
+                 textColor: 'white',
+                 trailColor: 'white',
+                 backgroundColor: 'grey"',
+                 pathTransitionDuration: 1.5,
+             
+                
+               })}
+              />
+                
+              );
+            }}
+          </VisibilitySensor>
+         
+         
           </div>
           <div style={styles.text}><h3>SCORE</h3> </div>
 

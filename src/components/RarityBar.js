@@ -62,6 +62,9 @@ const RarityBar = ({metadata}) => (
             //  bgColor={'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 25%, rgba(252,176,69,1) 75%, rgba(56,253,29,1) 100%)'}
              bgColor={'#bd3535'}
              baseBgColor={'transparent'}
+             transitionDuration= '2s'
+             transitionTimingFunction= 'linear'
+             animateOnRender={true} 
              
               />
 
