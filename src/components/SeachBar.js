@@ -50,7 +50,7 @@ class SeachBar extends Component {
 
       
      _resetInputField = () => {
-            document.querySelector(".field").value = '';
+            document.querySelector("input").value = '';
         };
     
     
@@ -60,11 +60,11 @@ class SeachBar extends Component {
             
         <div>
 
-        <form onSubmit={this._loadNftInfo} onClick={this._resetInputField}>
+        <form onSubmit={this._loadNftInfo} onClick={this._resetInputField} style={styles.form}>
         
-            <input type="text" className='field' placeholder=' enter token address'  onChange={this._searchTokenInputChanged} />
+            <input type="text" style={styles.field} placeholder=' enter token address'  onChange={this._searchTokenInputChanged} />
         
-            <input type="submit" className='search-button' value="Search"/>
+            <input type="submit" style={styles.button} className='search-button' value="CHECK RARITY"/>
 
         </form>
 
@@ -90,7 +90,34 @@ const styles = {
     loader_container: {
         display: "flex",
         justifyContent: "center"
-    }
+    },
+    form: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        margin: 60
+
+    },
+    field: {
+        
+        fontSize: 20,
+        color: 'white',
+        width: 400,
+        height: 40,
+        borderRadius: 40,
+        backgroundColor: 'transparent',
+        border: 'solid white 1px'
+        
+      },
+      button: {
+        fontSize: 20,
+        height: 40,
+        background: 'grey',
+        color: 'white',
+        borderRadius: 40,
+        border: 'solid white 4px'
+      }
 }
 
 export default SeachBar

@@ -1,0 +1,66 @@
+{
+    "name": "Bullyz Crew",
+    "symbol": "BC",
+    "description": "Bullyz Crew Description (to change!!)",
+    "seller_fee_basis_points": 500,
+    "image": "",
+    "animation_url": "",
+    "external_url": "https://www.bullyzcrew.art",
+    "attributes": [
+        {
+            "trait_type": "Animation",
+            "value": "None"
+        },
+        {
+            "trait_type": "Body Skin",
+            "value": "None"
+        },
+        {
+            "trait_type": "Beard",
+            "value": "None"
+        },
+        {
+            "trait_type": "Teeth",
+            "value": "None"
+        },
+        {
+            "trait_type": "Head wear",
+            "value": "None"
+        },
+        {
+            "trait_type": "Outfit",
+            "value": "None"
+        },
+        {
+            "trait_type": "Eyes asset",
+            "value": "None"
+        },
+        {
+            "trait_type": "Ears asset",
+            "value": "None"
+        },
+        {
+            "trait_type": "Neck asset",
+            "value": "None"
+        },
+        {
+            "trait_type": "Hand asset",
+            "value": "None"
+        }
+    ],
+    "properties": {
+        "files": [
+            {
+                "uri": "0.jpg",
+                "type": "image/jpg"
+            }
+        ],
+        "category": "image",
+        "creators": [
+            {
+                "address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                "share": 100
+            }
+        ]
+    }
+}

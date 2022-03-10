@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import  Attributes  from './Attributes';
 import RarityItems from './RarityItems';
+import RarityBar from './RarityBar';
+import NftModel from './NFTModel';
 import '../styles/Attributes.css';
 import styled, { keyframes } from 'styled-components';
 import { slideInUp, tada } from 'react-animations';
@@ -16,6 +18,8 @@ const TadaDiv = styled.div`
   animation: 2s ${tadaAnimation};
 `;
 
+const jsonModel = require('../Data/modele.json');
+
 
 class NftItems extends Component {
     render() {
@@ -23,16 +27,18 @@ class NftItems extends Component {
         let nft = this.props.nft[0]
 
         if(nft !== undefined) {
+
+            console.log(nft)
            
         
             return (
-                <SlideDiv>{nft.symbol !== "BC" && !nft.name.includes("Bulliz Crew")
-                ? <TadaDiv style={{display:"flex", justifyContent:"center"}}>
-                     <div style={styles.error}>Not from our collection</div>
-                </TadaDiv> 
+                <div>{nft.symbol !== "BC" && !nft.name.includes("Bulliz Crew")
+                ? <SlideDiv><TadaDiv style={{display:"flex", justifyContent:"center"}}>
+                     <div style={styles.error}>Not from our collection <br /> 凸( ಠ益ಠ)凸</div>
+                </TadaDiv></SlideDiv> 
                 :<div className='nft-info-container'>
     
-                    <div>
+                    <div style={styles.text}>
                         <h2>{nft.name}</h2>
                         <h3>{nft.symbol}</h3>
                     </div>
@@ -41,7 +47,13 @@ class NftItems extends Component {
                         <img src={nft.image} style={styles.image} alt="nft" />
                     
 
-                        <video width="330" height="180" controls style={styles.video} >
+                        <video width="280"
+                         height="280" 
+                         controls 
+                         style={styles.video}
+                         autoPlay
+                         loop
+                         >
                             <source src={nft.animation_url} type="video/mp4"/>
                         </video>
                     </div>
@@ -52,6 +64,12 @@ class NftItems extends Component {
 
                     </div>
 
+                    <div>
+
+                        <RarityBar metadata={nft.attributes}/>
+
+                    </div>
+
                     <div className='attributes-container'>
                         
                             <Attributes elements={nft.attributes} />
@@ -59,12 +77,15 @@ class NftItems extends Component {
                     </div>
 
                 </div>
-         } </SlideDiv>
+         } </div>
             );
         } 
         else {
             return (
-                <div></div>
+                
+               
+                   <NftModel metadata={jsonModel} />
+               
             )
         }
     } 
@@ -73,15 +94,19 @@ class NftItems extends Component {
 
 const styles = {
     image: {
-        width: 180,
-        height: 180,
+        width: 280,
+        height: 280,
         margin:10,
         backgroundColor: 'gray'
         
         
       },
       video : {
-        margin:10
+        margin:10,
+        width: 280,
+        maxWidth: '100%'
+        
+        
         
       },
       images_container: {
@@ -103,7 +128,10 @@ const styles = {
       rarity_items_container: {
           display: "flex",
           justifyContent: "center",
-      }
+      },
+      text: {
+        color: 'white'
+    }
       
    
 }
