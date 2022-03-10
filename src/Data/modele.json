@@ -9,43 +9,43 @@
     "attributes": [
         {
             "trait_type": "Animation",
-            "value": "None"
+            "value": ""
         },
         {
             "trait_type": "Body Skin",
-            "value": "None"
+            "value": ""
         },
         {
             "trait_type": "Beard",
-            "value": "None"
+            "value": ""
         },
         {
             "trait_type": "Teeth",
-            "value": "None"
+            "value": ""
         },
         {
             "trait_type": "Head wear",
-            "value": "None"
+            "value": ""
         },
         {
             "trait_type": "Outfit",
-            "value": "None"
+            "value": ""
         },
         {
             "trait_type": "Eyes asset",
-            "value": "None"
+            "value": ""
         },
         {
             "trait_type": "Ears asset",
-            "value": "None"
+            "value": ""
         },
         {
             "trait_type": "Neck asset",
-            "value": "None"
+            "value": ""
         },
         {
             "trait_type": "Hand asset",
-            "value": "None"
+            "value": ""
         }
     ],
     "properties": {

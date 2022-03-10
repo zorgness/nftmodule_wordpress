@@ -27,14 +27,12 @@ class NftItems extends Component {
         let nft = this.props.nft[0]
 
         if(nft !== undefined) {
-
-            console.log(nft)
            
         
             return (
                 <div>{nft.symbol !== "BC" && !nft.name.includes("Bulliz Crew")
                 ? <SlideDiv><TadaDiv style={{display:"flex", justifyContent:"center"}}>
-                     <div style={styles.error}>Not from our collection <br /> 凸( ಠ益ಠ)凸</div>
+                     <div style={styles.error}>Not from our Crew <br /> 凸( ಠ益ಠ)凸</div>
                 </TadaDiv></SlideDiv> 
                 :<div className='nft-info-container'>
     

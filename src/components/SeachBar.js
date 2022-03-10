@@ -13,7 +13,7 @@ class SeachBar extends Component {
         this.state = {
             nft : [],
             searchToken : '',
-            isLoading : false
+            // isLoading : false
         }  
         this._searchTokenInputChanged = this._searchTokenInputChanged.bind(this)
         this._loadNftInfo = this._loadNftInfo.bind(this)  
@@ -23,16 +23,12 @@ class SeachBar extends Component {
     _loadNftInfo(event) {
         event.preventDefault();
         if(this.state.searchToken.length === 44 ) {
-            this.setState({isLoading: true})
+            // this.setState({isLoading: true})
             NftInfoJson(this.state.searchToken)
-            .then(result => {
-                // if(result.data.symbol !== 'BC') {
-                //     console.log("not from our collection")
-                //     this.setState({searchToken:''})    
-                // }   
+            .then(result => { 
                 this.setState({
                     nft: [result.data],
-                     isLoading : false
+                    //  isLoading : false
                 })
             })
             this.setState({searchToken:''})   
@@ -68,16 +64,7 @@ class SeachBar extends Component {
 
         </form>
 
-        {this.state.isLoading ?
-            <div style={styles.loader_container}>
-                <TailSpin
-                     height="400" 
-                     width="400" 
-                     color='blue' 
-                     ariaLabel='loading'/>
-             </div>
-         
-         :  <div> <NftItems nft={this.state.nft}/> </div> }
+         <div> <NftItems nft={this.state.nft}/> </div> 
 
        
         </div>

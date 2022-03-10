@@ -22,7 +22,7 @@ const RarityAttributes = ({metadata}) => (
 
 const styles = {
     rarityNumber: {
-        color: "yellow",
+        color: "white",
     }
 }
 

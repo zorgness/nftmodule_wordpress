@@ -1,13 +1,6 @@
-// import { MDBProgress, MDBProgressBar } from 'mdb-react-ui-kit';
-// import 'mdb-react-ui-kit/dist/css/mdb.min.css'
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import ProgressBar from "@ramonak/react-progress-bar";
 import '../styles/RarityBar.css'
 const rarityChart = require('../Data/raritychart.json')
-
-
-
-
 
 
 function rarityTotal(data) {
@@ -28,7 +21,6 @@ function rarityTotal(data) {
     }
     if(typeof(sum) !== undefined && sum.length > 0) {
       sumTotal = sum.reduce((a,b) => a + b);
-      console.log(sumTotal)
       return (sumTotal / type.length).toFixed(2);
 
     } else {
@@ -93,10 +85,6 @@ const RarityBar = ({metadata}) => (
 )
 
 
-
-
-
-    
 
 const styles = {
     

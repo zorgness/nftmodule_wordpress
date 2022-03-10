@@ -23,11 +23,10 @@ function rarityTotal(data) {
     }
     if(typeof(sum) !== undefined && sum.length > 0) {
       sumTotal = sum.reduce((a,b) => a + b);
-      console.log(sumTotal)
       return (sumTotal / type.length).toFixed(2);
 
     } else {
-      sumTotal = 0;
+      sumTotal = 1000;
       return (sumTotal / type.length).toFixed(2);
     }
 
@@ -35,7 +34,8 @@ function rarityTotal(data) {
 
 }
 
-const RarityItems = ({metadata}) => (
+const RarityItems = ({metadata}) => 
+(
     <div style={styles.rarity_items}>
           <div style={styles.text}><h3>RARITY</h3></div>     
           
@@ -44,7 +44,7 @@ const RarityItems = ({metadata}) => (
            value={100 - rarityTotal(metadata)} 
            minValue={0} 
            maxValue={100} 
-           text={`${rarityTotal(metadata)}%`}
+           text={rarityTotal(metadata) == 100.00 ? '0 %' : `${rarityTotal(metadata)}%`}
            styles={buildStyles({
             pathColor: `rgba(194, 158, 120, ${100 - rarityTotal(metadata)})`,
             textSize: '18px',
