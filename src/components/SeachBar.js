@@ -3,7 +3,6 @@ import NftInfoJson from '../API/Connection';
 import NftItems from './NftItems';
 import '../styles/SearchBar.css'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { TailSpin } from  'react-loader-spinner'
 
 
 class SeachBar extends Component {
@@ -13,7 +12,7 @@ class SeachBar extends Component {
         this.state = {
             nft : [],
             searchToken : '',
-            // isLoading : false
+            
         }  
         this._searchTokenInputChanged = this._searchTokenInputChanged.bind(this)
         this._loadNftInfo = this._loadNftInfo.bind(this)  
@@ -23,12 +22,12 @@ class SeachBar extends Component {
     _loadNftInfo(event) {
         event.preventDefault();
         if(this.state.searchToken.length === 44 ) {
-            // this.setState({isLoading: true})
+            
             NftInfoJson(this.state.searchToken)
             .then(result => { 
                 this.setState({
                     nft: [result.data],
-                    //  isLoading : false
+                    
                 })
             })
             this.setState({searchToken:''})   
