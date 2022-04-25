@@ -45,7 +45,7 @@ class SeachBar extends Component {
 
       
      _resetInputField = () => {
-            document.querySelector("input").value = '';
+            document.querySelector(".search-bar").value = '';
         };
     
     
@@ -57,7 +57,7 @@ class SeachBar extends Component {
 
         <form onSubmit={this._loadNftInfo} onClick={this._resetInputField} style={styles.form}>
         
-            <input type="text" style={styles.field} placeholder=' enter token address'  onChange={this._searchTokenInputChanged} />
+            <input type="text" style={styles.field} className='search-bar' placeholder=' enter token address'  onChange={this._searchTokenInputChanged} />
         
             <input type="submit" style={styles.button} className='search-button' value="CHECK RARITY"/>
 
@@ -82,27 +82,30 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
-        margin: 60
+        margin: 20,
+        rowGap: 10,
+        columnGap: 10
 
     },
     field: {
         
         fontSize: 20,
         color: 'white',
-        width: 400,
+        width: 500,
         height: 40,
-        borderRadius: 40,
+        borderRadius: 5,
         backgroundColor: 'transparent',
-        border: 'solid white 1px'
+        // border: 'solid white 1px',
+        // padding: 10
         
       },
       button: {
-        fontSize: 20,
-        height: 40,
-        background: 'grey',
-        color: 'white',
-        borderRadius: 40,
-        border: 'solid white 4px'
+        //   margin: 10,
+        // fontSize: 20,
+        // height: 40,
+        // background: 'grey',
+        // color: 'white',
+        // border: 'solid white 4px'
       }
 }
 

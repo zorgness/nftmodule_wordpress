@@ -1,9 +1,8 @@
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import VisibilitySensor from "react-visibility-sensor";
 
 const rarityChart = require('../Data/raritychart.json')
-
 
 
 
@@ -39,23 +38,22 @@ function rarityTotal(data) {
 const RarityItems = ({metadata}) => 
 (
     <div style={styles.rarity_items}>
-          <div style={styles.text}><h3>RARITY</h3></div>     
+          <div style={styles.text}><h3 style={styles.text}>RARITY</h3></div>     
           
-          <div style={{width: 150}}>
+          <div style={{width: 150, position: 'relative'}}>
          
 
         <VisibilitySensor>
             {({ isVisible }) => {
               const percentage = isVisible ? 100 - rarityTotal(metadata) : 0;
               return (
-                <CircularProgressbar
+                <CircularProgressbarWithChildren
                 value={percentage} 
                 minValue={0} 
                 maxValue={100} 
-                text={rarityTotal(metadata) == 100.00 ? '0 %' : `${rarityTotal(metadata)}%`}
+                // text={<tspan dy={needDominantBaselineFix ? 15 : 0}>{rarityTotal(metadata) == 100.00 ? '0 %' : `${Math.round(rarityTotal(metadata))}%`}</tspan>}
                 styles={buildStyles({
-                 pathColor: `rgba(194, 158, 120, ${100 - rarityTotal(metadata)})`,
-                 textSize: '18px',
+                 pathColor: `rgba(195, 173, 129, ${100 - rarityTotal(metadata)})`,
                  textColor: 'white',
                  trailColor: 'white',
                  backgroundColor: 'grey"',
@@ -63,7 +61,18 @@ const RarityItems = ({metadata}) =>
              
                 
                })}
-              />
+              >
+                <div  style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              marginTop: '-10%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}><h3 style={styles.text2}>{rarityTotal(metadata) == 100.00 ? '0 %' : `${rarityTotal(metadata)} %`}</h3></div>
+                </CircularProgressbarWithChildren>
                 
               );
             }}
@@ -71,7 +80,7 @@ const RarityItems = ({metadata}) =>
          
          
           </div>
-          <div style={styles.text}><h3>SCORE</h3> </div>
+          <div style={styles.text}><h3 style={styles.text}>SCORE</h3> </div>
 
      
     </div>
@@ -83,19 +92,28 @@ const RarityItems = ({metadata}) =>
 const styles = {
     rarity_items: {
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         width: "auto",
-        padding: 10,
-        borderRadius: 20
+        
+        
     
         
     },
 
     text: {
-      padding:10,
+      // fontFamily:'Times New Roman, Times, serif',
+      margin: 10,
       fontSize: 25,
       color: 'white'
+
+    },
+    text2: {
+      // fontFamily:'Times New Roman, Times, serif',
+      fontSize: 25,
+      color: 'white',
+      
+      // top: -12
 
     }
 }

@@ -20,6 +20,52 @@ const TadaDiv = styled.div`
 
 const jsonModel = require('../Data/modele.json');
 
+const Image = styled.img`
+
+    width: 450px;
+    height: 450px;
+    
+    background-color: 'gray';
+
+    @media (max-width: 600px) {
+        width: 350px;
+        height: 350px;
+    }
+`
+
+
+const Video = styled.video`
+    width: 450px;   
+    height: 450px;
+
+    background-color: 'gray';
+    
+    @media (max-width: 600px) {
+        width: 350px;
+        height: 350px;
+}
+
+`
+const ImageContainer = styled.div`
+width: 450px;
+height: 450px;
+border: solid 20px rgba(0, 0, 0, 0.4);
+border-radius: 20px;
+
+@media (max-width: 600px) {
+    width: 350px;
+    height: 350px;
+}
+@media (max-width: 400px) {
+    border: solid 20px rgba(0, 0, 0, .0);
+}
+
+`
+
+
+
+
+
 
 class NftItems extends Component {
     render() {
@@ -31,29 +77,37 @@ class NftItems extends Component {
         
             return (
                 <div>{nft.symbol !== "BC" && !nft.name.includes("Bulliz Crew")
-                ? <SlideDiv><TadaDiv style={{display:"flex", justifyContent:"center"}}>
+                ? <SlideDiv><TadaDiv style={{display:"flex", justifyContent:"center", textAlign:"center"}}>
                      <div style={styles.error}>Not from our Crew <br /> 凸( ಠ益ಠ)凸</div>
                 </TadaDiv></SlideDiv> 
                 :<div className='nft-info-container'>
     
-                    <div style={styles.text}>
-                        <h2>{nft.name}</h2>
-                        <h3>{nft.symbol}</h3>
-                    </div>
+                    {/* <div style={styles.text}>
+                        <h2 style={styles.text}>{nft.name}</h2>
+                        <h3 style={styles.text}>{nft.symbol}</h3>
+                    </div> */}
 
                     <div style={styles.images_container}>
-                        <img src={nft.image} style={styles.image} alt="nft" />
-                    
+                        
+                    <ImageContainer >
 
-                        <video width="280"
-                         height="280" 
-                         controls 
-                         style={styles.video}
-                         autoPlay
-                         loop
-                         >
-                            <source src={nft.animation_url} type="video/mp4"/>
-                        </video>
+                        <Image src={nft.image}  alt="" />
+
+                    </ImageContainer>
+
+
+
+                    <ImageContainer >
+
+                        <Video
+                            controls
+                            autoPlay
+                            loop
+                            src={nft.animation_url}
+                            />  
+
+                    </ImageContainer>
+
                     </div>
 
                     <div style={styles.rarity_items_container}>
@@ -91,17 +145,10 @@ class NftItems extends Component {
         }
 
 const styles = {
-    image: {
-        width: 280,
-        height: 280,
-        margin:10,
-        backgroundColor: 'gray'
-        
-        
-      },
+    
       video : {
-        margin:10,
-        width: 280,
+        
+        width: 450,
         maxWidth: '100%'
         
         
@@ -111,10 +158,11 @@ const styles = {
           display: "flex",
           justifyContent: "space-around",
           flexWrap: "wrap",
-          padding: 20
+          padding: 20,
+          gap: '10px 10px'
       },
       error: {
-          fontFamily: "serial",
+        //   fontFamily: "serial",
           fontSize: 30,
           margin: 100,
           padding: 20,
@@ -128,7 +176,9 @@ const styles = {
           justifyContent: "center",
       },
       text: {
-        color: 'white'
+        color: 'white',
+        textAlign: 'center'
+
     }
       
    

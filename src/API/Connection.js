@@ -12,6 +12,9 @@ import axios from "axios"
 // is it totally fine to forget it because sdk already wrapped it for us
 
 
+// for connection on Mainnet change const connection = new Connection("https://api.mainnet-beta.solana.com/")
+
+
 const connection = new Connection("https://api.devnet.solana.com");
 
 export default async function NftInfoJson(tokenId) {
